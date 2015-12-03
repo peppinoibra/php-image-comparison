@@ -1,9 +1,9 @@
 <?php
-
-
+	
+	
 	// Created By Giuseppe Morra
 	// visit http://www.giuseppemorra.com
-	// ImageComparison v0.1
+	// ImageComparison v0.2
 	
 	
 	function imageComparison($firstImage,$secondImage){
@@ -11,6 +11,9 @@
 		switch( $firstImageInfo['extension'] ){ //switch image extension
 			case "jpg":
 				$image = imagecreatefromjpeg($firstImage);
+				break;
+			case "jpeg":
+				$image1 = imagecreatefromjpeg($secondImage);
 				break;
 			case "png":
 				$image = imagecreatefrompng($firstImage);
@@ -30,7 +33,6 @@
 		}
 		if( !isset($image) ){ //error: not find extension
 			return false;
-			exit;
 		}
 		$width = imagesx($image); //image width
 		$height = imagesy($image); //image height
@@ -67,7 +69,6 @@
 		}
 		if( !isset($image1) ){
 			return false;
-			exit;
 		}
 		$width = imagesx($image1);
 		$height = imagesy($image1);
@@ -80,9 +81,7 @@
 		$secondComparison = $color1;//second image
 		$comparison = count($firstComparison);
 		for( $x = 0; $x <= $comparison; $x++ ){
-			if( $firstComparison[$x] === $secondComparison[$x] ){
-				return true;
-			}else{
+			if( $firstComparison[$x] !== $secondComparison[$x] ){
 				return false;
 			}
 		}
