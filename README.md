@@ -4,7 +4,7 @@ Compare two pictures and find out if they are equal.
 Supported files: ".png",".jpg","wbmp","webp","xbm","xpm".
 
 Usage:
-
+```php
 $firstImage = "image1.png";
 
 $secondImage = "image2.png";
@@ -20,5 +20,5 @@ if( $comparison === false ){
     echo "The two images are the same!";
     
 }
-
+```
 visit: http://www.giuseppemorra.com
