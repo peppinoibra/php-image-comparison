@@ -5,6 +5,8 @@ Supported files: ".png",".jpg","wbmp","webp","xbm","xpm".
 
 Usage:
 ```php
+include "imageComparison.php";
+
 $firstImage = "image1.png";
 
 $secondImage = "image2.png";
