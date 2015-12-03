@@ -5,22 +5,26 @@ Supported files: ".png",".jpg","wbmp","webp","xbm","xpm".
 
 Usage:
 ```php
-include "imageComparison.php";
+<?php
 
-$firstImage = "image1.png";
-
-$secondImage = "image2.png";
-
-$comparison = imageComparison($firstImage,$secondImage);
-
-if( $comparison === false ){
-
-    echo "The two images are different!";
+    include "imageComparison.php";
     
-}else{
-
-    echo "The two images are the same!";
+    $firstImage = "image1.png";
     
-}
+    $secondImage = "image2.png";
+    
+    $comparison = imageComparison($firstImage,$secondImage);
+    
+    if( $comparison === false ){
+    
+        echo "The two images are different!";
+        
+    }else{
+    
+        echo "The two images are the same!";
+        
+    }
+
+?>
 ```
 visit: http://www.giuseppemorra.com
