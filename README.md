@@ -1,7 +1,7 @@
 # PHP Image Comparison
 Compare two pictures and find out if they are equal.
 
-Supported files: ".png",".jpg","wbmp","webp","xbm","xpm".
+Supported files: "png","jpg","wbmp","webp","xbm","xpm".
 
 Usage:
 ```php
